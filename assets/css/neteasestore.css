@@ -26,6 +26,7 @@ body {
     --button-radius: 10px;
     --border-color-rgba: 18,18,18;
     --color-button: 18,18,18;
+    --title-detail-color: #121212bf;
 }
 
 a {
@@ -1141,4 +1142,87 @@ text-align: center;
 
 .onmyoji-offcial-merch-template img {
     /* transform: translateY(-90px); */
+}
+
+/* --------------- Gear Up ----------- */
+
+.gear-up-booster {
+    width: 100%;
+}
+
+.gear-up-container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 36px 50px;
+    display: flex;
+}
+
+.gear-up-left {
+    width: 495px;
+}
+
+.gear-up-left img {
+    width: 100%;
+}
+
+.gear-up-title {
+    font-size: 1.6rem;
+    font-family: var(--font-family);
+    color: var(--title-detail-color);
+}
+
+.gear-up-name {
+    margin: 15px 0;
+    font-size: 2.4rem;
+    font-family: var(--font-family);
+    color: var(--font-title-product);
+    line-height: 1.4;
+}
+
+.gear-up-price {
+    font-size: 1.8rem;
+    color: var(--font-title-product);
+    line-height: 1.4;
+}
+
+.gear-up-tax {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    font-family: var(--font-family);
+    color: var(--title-detail-color);
+}
+
+.gear-up-tax span {
+    text-decoration: underline;
+}
+
+.gear-up-template {
+    margin-bottom: 15px;
+}
+
+.gear-up-template .template-top, .gear-up-template .tempalte-bottom {
+    margin-bottom: 12px;
+}
+
+.template-title {
+    font-size: 1.3rem;
+    font-family: var(--font-family);
+    color: var(--title-detail-color);
+    margin-bottom: 10px;
+}
+
+.template-list {
+    display: flex;
+    display: flex;
+}
+
+.template-items {
+    
+}
+
+/* ------------------- Gear up Right -------------- */
+
+.gear-up-right {
+    width: 605px;
+    padding: 0 70px;
 }
