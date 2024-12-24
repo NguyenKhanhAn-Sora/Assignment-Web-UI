@@ -1086,7 +1086,7 @@ text-align: center;
 /* ---------------------- Merch on sale ------------------- */
 
 .merch-on-sale-cart-container h3, .eggy-merch-on-sale h3,
-.naraka-merch-on-sale h3 {
+.naraka-merch-on-sale h3, .more-naraka-merch h3 {
     min-height: 30px;
 }
 
@@ -1103,7 +1103,7 @@ text-align: center;
 /* ---------------------- WorkShop - Series ------------------ */
 
 .workshop-series-container h3, .frozen-kingdom-container h3,
-.more-eggy-merch-container h3{
+.more-eggy-merch-container h3, .more-onmyoji-merch h3{
     min-height: 45px;
 }
 
@@ -1118,7 +1118,8 @@ text-align: center;
     opacity: 0.3;
 }
 
-.eggy-official-merch-template button{
+.eggy-official-merch-template button, .naraka-offcial-merch-template button,
+.onmyoji-offcial-merch-template button{
     background-color: #fff;
     color: rgb(var(--color-button));
     border: none;
@@ -1132,4 +1133,12 @@ text-align: center;
 
 .naraka-offcial-merch-template img {
     transform: translateY(-160px);
+}
+
+.onmyoji-offcial-merch-template {
+    height: 560px;
+}
+
+.onmyoji-offcial-merch-template img {
+    /* transform: translateY(-90px); */
 }

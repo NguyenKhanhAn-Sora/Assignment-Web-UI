@@ -680,3 +680,74 @@ function checkPageNarakaMerchOnSale() {
 
 showTotalPage(narakaMerchOnSaleTotalPage, Math.ceil(narakaMerchOnSaleCart.length/5));
 checkPageNarakaMerchOnSale();
+
+// ----------------- More Naraka Merch ---------------
+
+const btnLeftControlMoreNarakaMerch = document.querySelector('.more-naraka-merch .btn-left-control');
+const btnRightControlMoreNarakaMerch = document.querySelector('.more-naraka-merch .btn-right-control');
+
+const moreNarakaMerchContainer = document.querySelector('.more-naraka-merch-container');
+const moreNarakaMerchCart = document.querySelectorAll('.more-naraka-merch-cart');
+
+const moreNarakaMerchCurrentPage = document.querySelector('.more-naraka-merch .current-page');
+const moreNarakaMerchTotalPage = document.querySelector('.more-naraka-merch .total-page');
+
+function checkPageMoreNarakaMerch() {
+    let productEggyCheckPage = 0;
+    btnRightControlMoreNarakaMerch.addEventListener('click', function() {
+        ++productEggyCheckPage;
+        if(productEggyCheckPage>(Math.ceil(moreNarakaMerchCart.length/5))-1) {
+            productEggyCheckPage=0;
+        }
+        if(productEggyCheckPage==(Math.ceil(moreNarakaMerchCart.length/5))-1) {
+            if(moreNarakaMerchCart.length%5==1) {
+                moreNarakaMerchContainer.style.transform = `translateX(-${productEggyCheckPage*375*5-375*4}px)`
+            }
+            else if(moreNarakaMerchCart.length%5==2) {
+                moreNarakaMerchContainer.style.transform = `translateX(-${productEggyCheckPage*375*5-375*3}px)`
+                
+            }
+            else if(moreNarakaMerchCart.length%5==3) {
+                moreNarakaMerchContainer.style.transform = `translateX(-${productEggyCheckPage*375*5-375*2}px)`
+                
+            }
+            else if(moreNarakaMerchCart.length%5==4) {
+                moreNarakaMerchContainer.style.transform = `translateX(-${productEggyCheckPage*375*5-375}px)`
+            }
+        }
+        else {
+            moreNarakaMerchContainer.style.transform = `translateX(-${productEggyCheckPage*375*5}px)`
+        }
+        showCurrentPage(moreNarakaMerchCurrentPage, productEggyCheckPage);
+    })
+
+    btnLeftControlMoreNarakaMerch.addEventListener('click', function() {
+        --productEggyCheckPage;
+        if(productEggyCheckPage<0) {
+            productEggyCheckPage=Math.ceil(moreNarakaMerchCart.length/5)-1;
+            if(moreNarakaMerchCart.length%5==1) {
+                moreNarakaMerchContainer.style.transform = `translateX(-${productEggyCheckPage*375*5-375*4}px)`
+            }
+            else if(moreNarakaMerchCart.length%5==2) {
+                moreNarakaMerchContainer.style.transform = `translateX(-${productEggyCheckPage*375*5-375*3}px)`
+                
+            }
+            else if(moreNarakaMerchCart.length%5==3) {
+                moreNarakaMerchContainer.style.transform = `translateX(-${productEggyCheckPage*375*5-375*2}px)`
+                
+            }
+            else if(moreNarakaMerchCart.length%5==4) {
+                moreNarakaMerchContainer.style.transform = `translateX(-${productEggyCheckPage*375*5-375}px)`
+            }
+        }
+        else {
+            console.log(productEggyCheckPage);
+            moreNarakaMerchContainer.style.transform = `translateX(-${productEggyCheckPage*375*5}px)`
+        }
+        showCurrentPage(moreNarakaMerchCurrentPage, productEggyCheckPage);
+
+    })
+}
+
+showTotalPage(moreNarakaMerchTotalPage, Math.ceil(moreNarakaMerchCart.length/5));
+checkPageMoreNarakaMerch();
