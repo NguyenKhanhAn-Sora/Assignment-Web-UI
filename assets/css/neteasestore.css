@@ -1169,6 +1169,7 @@ text-align: center;
     font-size: 1.6rem;
     font-family: var(--font-family);
     color: var(--title-detail-color);
+    letter-spacing: 0.1rem;
 }
 
 .gear-up-name {
@@ -1183,6 +1184,7 @@ text-align: center;
     font-size: 1.8rem;
     color: var(--font-title-product);
     line-height: 1.4;
+    letter-spacing: 1px;
 }
 
 .gear-up-tax {
@@ -1190,10 +1192,12 @@ text-align: center;
     font-size: 1.2rem;
     font-family: var(--font-family);
     color: var(--title-detail-color);
+    letter-spacing: 0.1rem;
 }
 
 .gear-up-tax span {
     text-decoration: underline;
+    letter-spacing: 0.1rem;
 }
 
 .gear-up-template {
@@ -1209,6 +1213,9 @@ text-align: center;
     font-family: var(--font-family);
     color: var(--title-detail-color);
     margin-bottom: 10px;
+    margin-top: 5px;
+    display: block;
+    letter-spacing: 0.1rem;
 }
 
 .template-list {
@@ -1217,7 +1224,23 @@ text-align: center;
 }
 
 .template-items {
-    
+    margin-right: 10px;
+    border-radius: 999px;
+    width: auto;
+    padding: 10px 20px;
+    color: var(--font-title-product);
+    font-size: 1.4rem;
+    background-color: transparent;
+    font-family: var(--font-family);
+    letter-spacing: 0.1rem;
+    border: 1px solid rgba(var(--border-color-rgba),0.55);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.template-items.active {
+    background-color: var(--button-background-color);
+    color: #fff;
 }
 
 /* ------------------- Gear up Right -------------- */

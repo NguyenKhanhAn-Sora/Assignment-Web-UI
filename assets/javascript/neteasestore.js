@@ -751,3 +751,26 @@ function checkPageMoreNarakaMerch() {
 
 showTotalPage(moreNarakaMerchTotalPage, Math.ceil(moreNarakaMerchCart.length/5));
 checkPageMoreNarakaMerch();
+
+// ------------------ Gear Up Booster ------------
+
+const gearUpTemplateTopItems = document.querySelectorAll('.template-top .template-items');
+const gearUpTemplateBottomItems = document.querySelectorAll('.template-bottom .template-items');
+
+for(let i=0;i<gearUpTemplateBottomItems.length;i++) {
+    gearUpTemplateBottomItems[i].addEventListener('click', function() {
+        for(let k=0;k<gearUpTemplateBottomItems.length;k++) {
+            gearUpTemplateBottomItems[k].classList.remove('active');
+        }
+        gearUpTemplateBottomItems[i].classList.add('active');
+    })
+}
+
+for(let i=0;i<gearUpTemplateTopItems.length;i++) {
+    gearUpTemplateTopItems[i].addEventListener('click', function() {
+        for(let k=0;k<gearUpTemplateTopItems.length;k++) {
+            gearUpTemplateTopItems[k].classList.remove('active');
+        }
+        gearUpTemplateTopItems[i].classList.add('active');
+    })
+}
