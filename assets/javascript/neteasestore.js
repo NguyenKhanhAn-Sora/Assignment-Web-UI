@@ -774,3 +774,34 @@ for(let i=0;i<gearUpTemplateTopItems.length;i++) {
         gearUpTemplateTopItems[i].classList.add('active');
     })
 }
+
+// ------------------ Quantity Detail --------------
+
+const subtract = document.querySelector('.subtract');
+const plus = document.querySelector('.plus');
+const gearQuantity = document.querySelector('.quantity-control .quantity');
+
+subtract.addEventListener('click', function() {
+    subtractgear();
+})
+
+plus.addEventListener('click', function() {
+    plusgear();
+})
+
+function subtractgear() {
+    let quantityValue = parseInt(gearQuantity.innerHTML);
+    if(quantityValue==1) {
+        return;
+    }
+    else {
+        quantityValue--;
+        gearQuantity.innerHTML=quantityValue;
+    }
+}
+
+function plusgear() {
+    let quantityValue = parseInt(gearQuantity.innerHTML);
+    quantityValue++;
+    gearQuantity.innerHTML=quantityValue;
+}

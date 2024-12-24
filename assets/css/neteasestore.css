@@ -1165,6 +1165,14 @@ text-align: center;
     width: 100%;
 }
 
+
+/* ------------------- Gear up Right -------------- */
+
+.gear-up-right {
+    width: 605px;
+    padding: 0 70px;
+}
+
 .gear-up-title {
     font-size: 1.6rem;
     font-family: var(--font-family);
@@ -1185,6 +1193,7 @@ text-align: center;
     color: var(--font-title-product);
     line-height: 1.4;
     letter-spacing: 1px;
+    font-family: var(--font-family);
 }
 
 .gear-up-tax {
@@ -1243,9 +1252,43 @@ text-align: center;
     color: #fff;
 }
 
-/* ------------------- Gear up Right -------------- */
-
-.gear-up-right {
-    width: 605px;
-    padding: 0 70px;
+.gear-up-quantity {
+    margin-bottom: 15px;
 }
+
+.quantity-title {
+    font-size: 1.3rem;
+    letter-spacing: .1rem;
+    color: var(--title-detail-color);
+    margin-bottom: 6px;
+    font-family: var(--font-family);
+    display: block;
+    line-height: 1.4;
+}
+
+.quantity-control {
+    width: 140px;
+    height: 48px;
+    background-color: transparent;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.6rem;
+    font-family: var(--font-family);
+}
+
+.quantity-control span {
+    padding: 18px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.quantity-control .subtract img{
+    width: 12px;
+}
+
+.quantity-control .plus img {
+    width: 10px;
+}
+
