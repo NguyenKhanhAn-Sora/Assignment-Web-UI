@@ -296,7 +296,7 @@ btnShowBars.addEventListener('click', function(e) {
         showBarsFlag =true;
         headerNavBars.classList.add('active')
         whiteModal.style.display='block';
-        document.body.style.overflow='hidden';
+        document.body.style.overflowY='hidden';
     }
     else {
         btnShowBarsImg.src = "./assets/img/bars-icon--white.png";
@@ -305,7 +305,7 @@ btnShowBars.addEventListener('click', function(e) {
         headerNavBars.classList.remove('active')
         HiddenMenuPopupItems();
         whiteModal.style.display='none';
-        document.body.style.overflow='auto';
+        document.body.style.overflowY='auto';
     }
 })
 
@@ -376,14 +376,14 @@ const whiteModal = document.querySelector('.white_modal');
 const headerSearchFlag = false;
 
 const headerUserItems = document.querySelectorAll('.header_user .header_user-items');
-console.log(headerUserItems)
+console.log(headerUserItems )
 headerUserItems[0].addEventListener('click', function(event) {
     event.preventDefault();
     event.stopPropagation();
     headerSearch.style.display='block';
     headerBottom.style.opacity = '0';
     whiteModal.style.display='block';
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflowY = 'hidden';
     headerSearchFlag=true;
     
 })
@@ -393,7 +393,7 @@ btnCloseHeaderSearch.addEventListener('click', function() {
     headerBottom.style.opacity='1';
     headerSearch.style.display='none';
     whiteModal.style.display='none';
-    document.body.style.overflow = 'auto';
+    document.body.style.overflowY = 'auto';
     headerSearchFlag=false;
 
 })
@@ -402,7 +402,7 @@ whiteModal.addEventListener('click', function() {
     headerBottom.style.opacity='1';
     headerSearch.style.display='none';
     whiteModal.style.display='none';
-    document.body.style.overflow = 'auto';
+    document.body.style.overflowY = 'auto';
     headerSearchFlag=false;
 
 })
@@ -612,14 +612,17 @@ subscribeInput.addEventListener('blur', function() {
 // ------------------- Show/Hidden Show Img Product ----------------
 
 const showImgProductModal = document.querySelector('.show-img-product-modal');
-const productDetail = document.querySelector('.product-detail-left');
+const productDetailShowImg = document.querySelector('.product-detail-show-img');
 
-productDetail.addEventListener('click', function() {
+productDetailShowImg.addEventListener('click', function() {
     showImgProductModal.style.display='block';
+    document.body.style.overflowY='hidden'
 })
 
 showImgProductModal.addEventListener('click', function() {
     showImgProductModal.style.display='none';
+    document.body.style.overflowY='auto'
+
 })
 
 
@@ -713,3 +716,28 @@ function HiddenMenuPopupItems() {
     youdaoMenuFlag=false;
     youdaoBarsMenu.classList.remove('show-menu');
 }
+
+// ----------------- PreventDefault Img ------------
+
+function PreventDefaultImg() {
+        const cartImg = document.querySelectorAll('.cart-img') 
+        for(let i=0;i<cartImg.length;i++) {
+        cartImg[i].addEventListener('click', function(e) {
+            e.preventDefault();
+        })
+    }
+}
+
+window.addEventListener('resize', function() {
+    const windowWidth = window.innerWidth;
+    if(windowWidth < 750) {
+        PreventDefaultImg();
+    }
+})
+
+window.addEventListener('load', function() {
+    const windowWidth = window.innerWidth;
+    if(windowWidth < 750) {
+        PreventDefaultImg();
+    }
+})

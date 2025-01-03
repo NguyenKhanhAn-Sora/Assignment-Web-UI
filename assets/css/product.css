@@ -388,6 +388,14 @@ body {
         font-size: 3rem;
     }
 
+    .related-product {
+        padding: 25px 10px 20px;
+    }
+
+    .related-product h2 {
+        font-size: 3rem;
+    }
+
     .product-detail-descript {
         width: 100%;
         margin: unset;
