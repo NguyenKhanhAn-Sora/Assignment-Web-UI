@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=none">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/fontawesome-free-6.7.2-web/css/all.css">
+    <link rel="icon" type="image/x-icon" href="./assets/img/Favicon/favicon-32x32.png">
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+    <!-- -------------------- Fonts ----------------->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap" rel="stylesheet">
+    
+    <!-- -------------------------------------- -->
+    
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Identity V Offical Website</title>
+</head>
+<body>
+    <!-- ------------- Video Background ----------------------- -->
+   
+    <div class="opening_container">
+        <img src="./assets/img/NetEase Logo/NetEase Logo.png" alt="">
+        <img class="img_color" src="./assets/img/NetEase Logo/1110523.png" alt="">
+    </div>
+    <div id="video_background">
+        <video id="myvideoBackground"  muted autoplay src="https://dwxcx.fp.ps.netease.com/file/66e4fa7b61fdf7c0f20c17b8H2UgzRND05"></video>
+    </div>
+
+    <!-- ------------------- Main ------------------- -->
+
+    <div id="main">
+        <section class="header">
+            <div>
+                <img src="./assets/img/NetEase Logo/identityVLogo.webp" alt="">
+            </div>
+            <div class="header_right">
+                <a target="_blank" href="">
+                    <img src="./assets/img/NetEase Logo/btn_coa_a218897.webp" alt="">
+                </a>
+                <a target="_blank" href="">
+                    <img src="./assets/img/NetEase Logo/btn_redem_59f7892.webp" alt="">
+                </a>
+                <div class="language">
+                    <span id="language_active">
+                        English
+                    </span>
+                    <ul class="language_list">
+                        <li class="language_items" onclick="translatePage('en')">
+                            <a target="_blank" class="language_items-link" href="">
+                                English
+                            </a>
+                        </li>
+                        <li class="language_items" onclick="translatePage('zh-TW')">
+                            <a target="_blank" class="language_items-link" href="">
+                                繁體中文
+                            </a>
+                        </li>
+                        <li class="language_items" onclick="translatePage('ja')">
+                            <a target="_blank" class="language_items-link" href="">
+                                日本語
+                            </a>
+                        </li>
+                        <li class="language_items" onclick="translatePage('ko')">
+                            <a target="_blank" class="language_items-link" href="">
+                                한국어
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <div class="container_nav">
+                <a target="_blank" href="Idv-Art-Museum"></a>
+                <a target="_blank" href="Background"></a>
+                <a target="_blank" href="Character"></a>
+                <a target="_blank" href="Gallery"></a>
+                <a target="_blank" href="./neteasestore.html"></a>
+                <a target="_blank" href="News"></a>
+                <a target="_blank" href="Game-Feature"></a>
+            </div>
+            <div class="container_dowload">
+                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.netease.idv.googleplay&referrer=af_tranid%3DKOekEn3lQSEvDWShH9E8hw%26c%3D1%26pid%3Dofficialwebg">
+                    <img src="./assets/img/Dowload App/btn_google_a3ca343.webp" alt="">
+                </a>
+                <a target="_blank" href="https://apps.apple.com/us/app/identity-v/id1347780764?mt=8">
+                    <img src="./assets/img/Dowload App/appstore.webp" alt="">
+                </a>
+                <a target="_blank" href="https://adl.easebar.com/d/g/id5/c/qcpc">
+                    <img src="./assets/img/Dowload App/Desktop.webp" alt="">
+                </a>
+            </div>
+        </div>
+        <section class="footer">
+            <div class="footer_container">
+                <div class="footer_publisher">
+                    <img src="./assets/img/Footer Logo/China.webp" alt="">
+                    <img src="./assets/img/Footer Logo/NeteaseGame.webp" alt="">
+                    <img src="./assets/img/Footer Logo/Joker.webp" alt="">
+                </div>
+                <p>
+                    ©Joker Studio ©2020 NetEaseInc. All Rights Reserved
+                </p>
+            </div>
+        </section>
+    </div>
+    <div id="google_translate_element" style="display: none;"></div>
+
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+        { pageLanguage: 'en' }, // Thay 'en' bằng ngôn ngữ mặc định của trang (ví dụ: 'vi' cho Tiếng Việt)
+        'google_translate_element'
+        );
+    }
+
+    function translatePage(lang) {
+        var translateElement = document.querySelector('.goog-te-combo');
+        if (translateElement) {
+        translateElement.value = lang;
+        translateElement.dispatchEvent(new Event('change')); // Kích hoạt thay đổi ngôn ngữ
+        } else {
+        alert('Google Translate chưa sẵn sàng!');
+        }
+    }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- ---------------- Javascript ------------------- -->
+    <script src="./assets/javascript/index.js">
+    </script>
+</body>
+</html>

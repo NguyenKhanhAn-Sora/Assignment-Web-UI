@@ -1,0 +1,385 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    top: 0 !important;
+}
+
+:root {
+    --font-family: "Assistant", sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* ----------------- Opening ---------------- */
+
+#video_background {
+    display: none;
+    transition: all 1s ease;
+}
+
+#video_background video{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.opening_container {
+    background-color: #000;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: fadeOutImg;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.opening_container img {
+    background-color: transparent;
+    position: absolute;
+    transform: scale(0.6);
+}
+
+.opening_container img:last-child {
+    transform: scale(0.6);
+    height: 600px;
+    animation-name: clipPathImg ;
+    animation-duration: 3s;
+}
+
+@keyframes clipPathImg {
+    from{
+        clip-path: inset(420px 0 0 0);
+    }
+    to {
+        clip-path: inset(0px 0 0 0);
+    }
+}
+
+@keyframes fadeOutImg{
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* ------------------ Main ----------------------- */
+
+#main {
+    background-image: url('../img/Img-Main/Background-Main.jpg');
+    height: calc(1080px + 165px);
+    background-repeat: no-repeat;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 2s ease; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    scrollbar-width: none;
+    /* display: none; */
+}
+
+.header {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    padding: 10px 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_right {
+    display: flex;   
+    align-items: center;
+    margin-right: 20px;
+}
+
+.language {
+    color: #dde8f1;
+    font-family: var(--font-family);
+    font-size: 25px;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.header_right a:nth-child(2) {
+    margin: 0px 65px 0 30px;
+}
+
+.header_right .language span::before {
+    position: absolute;
+    content: '';
+    display: block;
+    background-image: url('../img/Img-Main/World-icon.webp');
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    left: -35px;
+}
+
+.header_right .language span::after {
+    position: absolute;
+    content: '';
+    display: block;
+    background-image: url('../img/Img-Main/acheron-down-icon.webp');
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    right: -50px;
+    top: 12px;
+}
+
+.language_list {
+    width: 100px;
+    height: 120px;
+    background-color: #fff;
+    top: 30px;
+    right: 0px;
+    background-color: transparent;
+    display: none;
+    position: absolute;
+}
+
+.language_list::before {
+    content: '';
+    display: block;
+    width: 120%;
+    height: 15px;
+    background-color: transparent;
+    position: absolute;
+    top: -10px;
+    left:-10px;
+}
+
+
+.language_items a {
+    text-decoration: none;
+    color: #dde8f1;
+    font-size: 22px;
+    width: 100%;
+    height: 30px;
+    display: block;
+    font-family: var(--font-family);
+    text-align: right;
+    padding: 6px 0px 6px 10px;
+    
+}
+
+.language_list li:first-child a {
+    color: #d07491;
+}
+
+.language_items a:hover {
+    color: #d07491;
+}
+
+.language_list.open {
+    display: block;
+
+}.language:hover .language_list {
+    display: block;
+}
+
+
+/* ------------------ Container ---------------- */
+
+.container {
+    width: 100%;
+}
+
+.container_nav  {
+    width: 100%;
+}
+
+.container_nav a {
+    display: block;
+    position: absolute;
+}
+
+.container_nav a:first-child{
+    background: url('../img/Img-Main/IDV-Art-Museum.png') no-repeat;
+    width: 328px;
+    height: 338px;
+    left: 225px;
+    top: 250px;
+    animation: guide 4.6s ease-in-out 0s infinite;
+}
+
+.container_nav a:nth-child(2) {
+    background: url('../img/Img-Main/Background.png') no-repeat;
+    width: 237px;
+    height: 220px;
+    left: 690px;
+    top: 240px;
+    animation: guide 4.6s ease-in-out 0s infinite;
+}
+
+.container_nav a:nth-child(3) {
+    background: url('../img/Img-Main/character.png') no-repeat;
+    width: 282px;
+    height: 251px;
+    left: 1110px;
+    top: 190px;
+    animation: guide 3.6s ease-in-out -1.2s infinite;
+}
+
+.container_nav a:nth-child(4) {
+    background: url('../img/Img-Main/Gallery.png') no-repeat;
+    width: 174px;
+    height: 270px;
+    left: 1450px;
+    top: 250px;
+    animation: guide 4.6s ease-in-out -3s infinite;
+}
+
+.container_nav a:nth-child(5) {
+    background: url('../img/Img-Main/Merchandise.png') no-repeat;
+    width: 210px;
+    height: 231px;
+    left: 1290px;
+    top: 570px;
+    animation: guide 4.2s ease-in-out -.6s infinite
+}
+
+.container_nav a:nth-child(6) {
+    background: url('../img/Img-Main/News.png') no-repeat;
+    width: 294px;
+    height: 243px;
+    left: 910px;
+    top: 650px;
+    animation: guide 4s ease-in-out -2.4s infinite;
+}
+
+.container_nav a:nth-child(7) {
+    background: url('../img/Img-Main/Game-Feature.png') no-repeat;
+    width: 244px;
+    height: 242px;
+    left: 500px;
+    top: 610px;
+    animation: guide 4.2s ease-in-out -1.8s infinite;
+}
+
+@keyframes guide {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        filter: alpha(opacity = 100);
+    }
+    50% {
+        transform: translateY(-20px) scale(0.96);
+        opacity: .9;
+        filter: alpha(opacity = 90);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        filter: alpha(opacity = 100);
+    }
+}
+
+/* ---------- Dowload --------- */
+
+.container .container_dowload {
+    width: 175px;
+    height: 210px;
+    background-color: rgba(98, 161, 201, 0.15);
+    position: absolute;
+    right: 0;
+    top: 500px;
+    padding: 22px 0px;
+}
+
+.container .container_dowload a  {
+    margin-left: auto;
+    display: block;
+    width: 90%;
+}
+
+.container .container_dowload a img{
+    width: 100%;
+    height: 100%;
+}
+
+.container .container_dowload a+a {
+    margin-top: 13px;
+}
+
+/* -------------------- Footer -------------------- */
+
+.footer {
+    width: 100%;
+    height: 165px;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer_container {
+    padding: 30px;
+    width: 650px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.footer_publisher {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_publisher img {
+    width: 150px;
+}
+
+.footer_container p {
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: #fff;
+    margin-top: 30px;
+}
+
+
+/* ------------------- Google Translate --------------- */
+.skiptranslate {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf {
+    display: none;
+}
+
+.VIpgJd-yAWNEb-L7lbkb {
+    display: none !important;
+}
