@@ -17,7 +17,13 @@ body {
     top: 0 !important;
 }
 
-
+.cart:focus,
+.cart:active
+{
+    outline: none; /* Loại bỏ viền mặc định */
+    box-shadow: none; /* Loại bỏ hiệu ứng bóng */
+    background-color: transparent; /* Loại bỏ màu nền nếu cần */
+}
 
 :root {
     --font-family: "Assistant", sans-serif;

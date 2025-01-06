@@ -147,7 +147,7 @@ window.addEventListener('click', function() {
         eggyMenuFlag=false;
     }
     whiteModal.style.display='none';
-    languageList.classList.remove('active');
+    language.classList.remove('active');
     languageMenuFlag=false;
     headerNavBarsLanguage.classList.remove('active');
     headerNavBars.classList.remove('active');
@@ -335,7 +335,7 @@ const headerBottom = document.getElementsByClassName('header_bottom')[0];
 const headerSearch = document.getElementsByClassName('header_search')[0];
 const btnCloseHeaderSearch = document.getElementsByClassName('btn-close-header-search')[0];
 const whiteModal = document.querySelector('.white_modal');
-const headerSearchFlag = false;
+let headerSearchFlag = false;
 
 const headerUserItems = document.querySelectorAll('.header_user .header_user-items');
 
@@ -357,7 +357,6 @@ btnCloseHeaderSearch.addEventListener('click', function() {
     whiteModal.style.display='none';
     document.body.style.overflowY = 'auto';
     headerSearchFlag=false;
-
 })
 
 whiteModal.addEventListener('click', function() {
@@ -1205,4 +1204,5 @@ btnCloseNotification.addEventListener('click', function() {
 });
 
 // -------------------- Get Info Product When Click To Card -------------
+
 

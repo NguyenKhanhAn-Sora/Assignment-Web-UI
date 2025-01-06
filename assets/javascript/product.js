@@ -741,3 +741,6 @@ window.addEventListener('load', function() {
         PreventDefaultImg();
     }
 })
+
+// --------------- Show Info Product Selected ---------------
+
